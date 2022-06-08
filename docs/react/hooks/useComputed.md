@@ -6,7 +6,7 @@ react中函数式组件 可以用useMemo模拟vue的computed的get属性 当需�
 
 下面自定义hooks useComputed
 
-首先说明vue和react的状态区别在于 vue 用了proxy劫持数据 
+首先说明vue和react的状态区别在于 vue用了proxy劫持数据 我们可以直接修改状态 但是react里面state的修改必须试用setState函数 
 
 也就是说我们vue的computed里面可以 直接对data数据操作即可完成set数据
 
