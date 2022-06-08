@@ -2,7 +2,7 @@
 #### 在react函数式组件模拟vue computed的set功能 ####
 ******
 
-react中函数式组件 可以用useMemo 模拟vue的computed的get属性 当需要用到set属性的时候 需要对该hooks进行扩展
+react中函数式组件 可以用useMemo模拟vue的computed的get属性 当需要用到set属性的时候 需要对该hooks进行扩展
 
 下面自定义hooks useComputed
 
@@ -17,7 +17,7 @@ export default {
     msg: '我是蔡徐坤'
   }),
   computed: {
-    reverseMsg {
+    reverseMsg: {
       get() {
         return this.msg.split('').reverse().join('')
       },
