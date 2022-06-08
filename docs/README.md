@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /img/rika.jpg
+heroImage: /img/akebi.jpg
 heroText: Hero 标题2
 tagline: Hero 副标题
 actionText: 快速上手 →

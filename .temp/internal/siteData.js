@@ -8,25 +8,10 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "useInit缓存函数 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/useInit/useInit.html",
-      "relativePath": "javascript/useInit/useInit.md",
-      "key": "v-764d362e",
-      "path": "/javascript/useInit/useInit.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useInit缓存函数",
-          "slug": "useinit缓存函数"
-        }
-      ]
-    },
-    {
       "title": "Home",
       "frontmatter": {
         "home": true,
-        "heroImage": "/img/rika.jpg",
+        "heroImage": "/img/akebi.jpg",
         "heroText": "Hero 标题2",
         "tagline": "Hero 副标题",
         "actionText": "快速上手 →",
@@ -53,21 +38,6 @@ export const siteData = {
       "path": "/"
     },
     {
-      "title": "PubSub的实现 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/pubsub.html",
-      "relativePath": "javascript/pubsub.md",
-      "key": "v-4f25769c",
-      "path": "/javascript/pubsub.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "PubSub的实现",
-          "slug": "pubsub的实现"
-        }
-      ]
-    },
-    {
       "title": "useComputed ###",
       "frontmatter": {},
       "regularPath": "/react/hooks/useComputed.html",
@@ -83,11 +53,41 @@ export const siteData = {
       ]
     },
     {
+      "title": "useInit缓存函数 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useInit/useInit.html",
+      "relativePath": "javascript/useInit/useInit.md",
+      "key": "v-764d362e",
+      "path": "/javascript/useInit/useInit.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useInit缓存函数",
+          "slug": "useinit缓存函数"
+        }
+      ]
+    },
+    {
       "frontmatter": {},
       "regularPath": "/test/test.html",
       "relativePath": "test/test.md",
       "key": "v-1ac4b948",
       "path": "/test/test.html"
+    },
+    {
+      "title": "PubSub的实现 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/pubsub.html",
+      "relativePath": "javascript/pubsub.md",
+      "key": "v-4f25769c",
+      "path": "/javascript/pubsub.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "PubSub的实现",
+          "slug": "pubsub的实现"
+        }
+      ]
     }
   ],
   "themeConfig": {
