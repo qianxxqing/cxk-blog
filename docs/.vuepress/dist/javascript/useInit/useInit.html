@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>useInit缓存函数 ### | cxk</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="cxknmsl">
+    
+    <link rel="preload" href="/assets/css/0.styles.495d9abf.css" as="style"><link rel="preload" href="/assets/js/app.27580fa5.js" as="script"><link rel="preload" href="/assets/js/2.f87ead69.js" as="script"><link rel="preload" href="/assets/js/6.8e52c334.js" as="script"><link rel="prefetch" href="/assets/js/10.1f7259ca.js"><link rel="prefetch" href="/assets/js/11.9c81701f.js"><link rel="prefetch" href="/assets/js/3.3b0c9737.js"><link rel="prefetch" href="/assets/js/4.41aeaa42.js"><link rel="prefetch" href="/assets/js/5.1c345eba.js"><link rel="prefetch" href="/assets/js/7.ef4a1a9d.js"><link rel="prefetch" href="/assets/js/8.fe91bfa6.js"><link rel="prefetch" href="/assets/js/9.562ee452.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.495d9abf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">cxk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/test/test.html" class="nav-link">
+  test页面
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/test/test.html" class="nav-link">
+  test页面
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/test/test.html" class="sidebar-link">test页面</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JavaScript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/javascript/pubsub.html" class="sidebar-link">发布订阅(PubSub)</a></li><li><a href="/javascript/useInit/useInit.html" aria-current="page" class="active sidebar-link">useInit函数</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="useinit缓存函数"><a href="#useinit缓存函数" class="header-anchor">#</a> useInit缓存函数</h3> <p>有以下场景: 使用纯函数 传入status 得到 msg 函数内部每次都要创建一个较大开销的map</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token function-variable function">getMsg</span> <span class="token operator">=</span> <span class="token parameter">status</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'createMap'</span><span class="token punctuation">)</span>
+  <span class="token comment">//需要较大开销去创建map</span>
+  <span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span>
+    <span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">114514</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">_<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">得到的消息是: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'createMap'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>status<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">'消息未查询到'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> statusList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">20000</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> msgList <span class="token operator">=</span> statusList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">status</span> <span class="token operator">=&gt;</span> <span class="token function">getMsg</span><span class="token punctuation">(</span>status<span class="token punctuation">)</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>msgList<span class="token punctuation">)</span>
+
+</code></pre></div><p>可以看到 createMap执行了3次 但实际上我们只需要1次</p> <p><img src="/assets/img/useInit1.916c4788.png" alt="alt 123"></p> <p>解决方法其实可以把map的定义放在getMsg外面 但是这样产生了副作用 我们在外部并不需要使用map 所以 封装一个函数 <strong>useInit</strong> 来记忆map的定义</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+* @function useInit
+* @description 缓存init的函数
+* @param init {any} 需要被记忆的初始值 如果是函数则得到函数的结果并传入cb的init中
+* @param cb {Function} (init, ...args) =&gt; any
+*/</span>
+<span class="token keyword">const</span> <span class="token function-variable function">useInit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">init<span class="token punctuation">,</span> cb</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> initRes <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> init <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> init
+  <span class="token keyword">return</span> <span class="token function">cb</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> initRes<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//demo</span>
+<span class="token keyword">const</span> getMsg <span class="token operator">=</span> <span class="token function">useInit</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'createMap'</span><span class="token punctuation">)</span>
+    <span class="token comment">//需要较大开销去创建map</span>
+    <span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span>
+      <span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">114514</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">_<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">得到的消息是: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'createMap'</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> defaultMsg <span class="token operator">=</span> <span class="token string">'消息未查询到'</span>
+    
+    <span class="token comment">//返回值会被第二个回调函数接收</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      map<span class="token punctuation">,</span>
+      defaultMsg
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> map<span class="token punctuation">,</span> defaultMsg <span class="token punctuation">}</span><span class="token punctuation">,</span> status</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">//第一个形参是useInit传入的init 后面的...args是getMsg传入的status</span>
+    <span class="token keyword">return</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>status<span class="token punctuation">)</span> <span class="token operator">||</span> defaultMsg
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> statusList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">200000</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> msgList <span class="token operator">=</span> statusList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">status</span> <span class="token operator">=&gt;</span> <span class="token function">getMsg</span><span class="token punctuation">(</span>status<span class="token punctuation">)</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>msgList<span class="token punctuation">)</span>
+</code></pre></div><p><img src="/assets/img/useInit2.d45ea5da.png" alt="alt "></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/javascript/pubsub.html" class="prev">
+        发布订阅(PubSub)
+      </a></span> <span class="next"><a href="/react/hooks/useComputed.html">
+        useComputed
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.27580fa5.js" defer></script><script src="/assets/js/2.f87ead69.js" defer></script><script src="/assets/js/6.8e52c334.js" defer></script>
+  </body>
+</html>
