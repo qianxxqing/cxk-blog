@@ -8,6 +8,21 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "class SuperArray ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/ArraySet/ArraySet.html",
+      "relativePath": "javascript/ArraySet/ArraySet.md",
+      "key": "v-3643048e",
+      "path": "/javascript/ArraySet/ArraySet.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "class SuperArray",
+          "slug": "class-superarray"
+        }
+      ]
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -38,17 +53,17 @@ export const siteData = {
       "path": "/"
     },
     {
-      "title": "useComputed ###",
+      "title": "PubSub的实现 ###",
       "frontmatter": {},
-      "regularPath": "/react/hooks/useComputed.html",
-      "relativePath": "react/hooks/useComputed.md",
-      "key": "v-2d656c48",
-      "path": "/react/hooks/useComputed.html",
+      "regularPath": "/javascript/pubsub.html",
+      "relativePath": "javascript/pubsub.md",
+      "key": "v-4f25769c",
+      "path": "/javascript/pubsub.html",
       "headers": [
         {
           "level": 3,
-          "title": "useComputed",
-          "slug": "usecomputed"
+          "title": "PubSub的实现",
+          "slug": "pubsub的实现"
         }
       ]
     },
@@ -75,17 +90,17 @@ export const siteData = {
       "path": "/test/test.html"
     },
     {
-      "title": "PubSub的实现 ###",
+      "title": "useComputed ###",
       "frontmatter": {},
-      "regularPath": "/javascript/pubsub.html",
-      "relativePath": "javascript/pubsub.md",
-      "key": "v-4f25769c",
-      "path": "/javascript/pubsub.html",
+      "regularPath": "/react/hooks/useComputed.html",
+      "relativePath": "react/hooks/useComputed.md",
+      "key": "v-2d656c48",
+      "path": "/react/hooks/useComputed.html",
       "headers": [
         {
           "level": 3,
-          "title": "PubSub的实现",
-          "slug": "pubsub的实现"
+          "title": "useComputed",
+          "slug": "usecomputed"
         }
       ]
     }
@@ -113,6 +128,10 @@ export const siteData = {
       {
         "title": "JavaScript",
         "children": [
+          [
+            "/javascript/ArraySet/ArraySet.md",
+            "ArraySet"
+          ],
           [
             "/javascript/pubsub.md",
             "发布订阅(PubSub)"
