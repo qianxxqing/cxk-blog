@@ -37,7 +37,7 @@ console.log(msgList)
 */
 const useInit = (init, cb) => {
   const initRes = (typeof init === 'function') ? init() : init
-  return cb.bind(this, initRes)
+  return (...args) => cb(initRes, ...args)
 }
 
 //demo
