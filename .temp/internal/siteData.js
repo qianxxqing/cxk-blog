@@ -8,6 +8,86 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "devConst ##",
+      "frontmatter": {},
+      "regularPath": "/plugins/plugins.html",
+      "relativePath": "plugins/plugins.md",
+      "key": "v-21356b48",
+      "path": "/plugins/plugins.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "devConst",
+          "slug": "devconst"
+        },
+        {
+          "level": 2,
+          "title": "代理console",
+          "slug": "代理console"
+        }
+      ]
+    },
+    {
+      "title": "JavaScript类的扩展 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/extendClass/extendClass.html",
+      "relativePath": "javascript/extendClass/extendClass.md",
+      "key": "v-292f79dc",
+      "path": "/javascript/extendClass/extendClass.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "JavaScript类的扩展",
+          "slug": "javascript类的扩展"
+        }
+      ]
+    },
+    {
+      "title": "PubSub的实现 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/pubsub.html",
+      "relativePath": "javascript/pubsub.md",
+      "key": "v-4f25769c",
+      "path": "/javascript/pubsub.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "PubSub的实现",
+          "slug": "pubsub的实现"
+        }
+      ]
+    },
+    {
+      "title": "useInit缓存函数 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useInit/useInit.html",
+      "relativePath": "javascript/useInit/useInit.md",
+      "key": "v-764d362e",
+      "path": "/javascript/useInit/useInit.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useInit缓存函数",
+          "slug": "useinit缓存函数"
+        }
+      ]
+    },
+    {
+      "title": "useComputed ###",
+      "frontmatter": {},
+      "regularPath": "/react/hooks/useComputed.html",
+      "relativePath": "react/hooks/useComputed.md",
+      "key": "v-2d656c48",
+      "path": "/react/hooks/useComputed.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useComputed",
+          "slug": "usecomputed"
+        }
+      ]
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -36,86 +116,6 @@ export const siteData = {
       "relativePath": "README.md",
       "key": "v-1c7f9382",
       "path": "/"
-    },
-    {
-      "title": "useInit缓存函数 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/useInit/useInit.html",
-      "relativePath": "javascript/useInit/useInit.md",
-      "key": "v-764d362e",
-      "path": "/javascript/useInit/useInit.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useInit缓存函数",
-          "slug": "useinit缓存函数"
-        }
-      ]
-    },
-    {
-      "title": "PubSub的实现 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/pubsub.html",
-      "relativePath": "javascript/pubsub.md",
-      "key": "v-4f25769c",
-      "path": "/javascript/pubsub.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "PubSub的实现",
-          "slug": "pubsub的实现"
-        }
-      ]
-    },
-    {
-      "title": "JavaScript类的扩展 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/extendClass/extendClass.html",
-      "relativePath": "javascript/extendClass/extendClass.md",
-      "key": "v-292f79dc",
-      "path": "/javascript/extendClass/extendClass.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "JavaScript类的扩展",
-          "slug": "javascript类的扩展"
-        }
-      ]
-    },
-    {
-      "title": "devConst ##",
-      "frontmatter": {},
-      "regularPath": "/plugins/plugins.html",
-      "relativePath": "plugins/plugins.md",
-      "key": "v-21356b48",
-      "path": "/plugins/plugins.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "devConst",
-          "slug": "devconst"
-        },
-        {
-          "level": 2,
-          "title": "代理console",
-          "slug": "代理console"
-        }
-      ]
-    },
-    {
-      "title": "useComputed ###",
-      "frontmatter": {},
-      "regularPath": "/react/hooks/useComputed.html",
-      "relativePath": "react/hooks/useComputed.md",
-      "key": "v-2d656c48",
-      "path": "/react/hooks/useComputed.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useComputed",
-          "slug": "usecomputed"
-        }
-      ]
     },
     {
       "frontmatter": {},

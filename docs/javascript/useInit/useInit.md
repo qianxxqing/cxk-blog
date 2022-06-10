@@ -2,7 +2,7 @@
 
 
 
-有以下场景: 使用纯函数 传入status 得到 msg 函数内部每次都要创建一个较大开销的map
+有以下场景: 使用纯函数 传入status 得到 msg 函数内部每次都要创建一个较大开销的`map`
 
 ```javascript
 const getMsg = status => {
@@ -21,12 +21,12 @@ console.log(msgList)
 
 ```
 
-可以看到 createMap执行了3次 但实际上我们只需要1次
+可以看到 `createMap`执行了3次 但实际上我们只需要1次
 
 ![alt 123](./img/useInit1.png)
 
 
-解决方法其实可以把map的定义放在getMsg外面 但是这样产生了副作用 我们在外部并不需要使用map 所以 封装一个函数 **useInit** 来记忆map的定义
+解决方法其实可以把map的定义放在`getMsg`外面 但是这样产生了副作用 我们在外部并不需要使用map 所以 封装一个函数 `useInit` 来记忆map的定义
 
 ```javascript
 /**

@@ -9,31 +9,11 @@ import GlobalLayout from "/Users/x/cxk/vue-press/vuepress-starter/node_modules/@
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-1c7f9382",
-    path: "/",
+    name: "v-21356b48",
+    path: "/plugins/plugins.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1c7f9382").then(next)
-    },
-  },
-  {
-    path: "/index.html",
-    redirect: "/"
-  },
-  {
-    name: "v-764d362e",
-    path: "/javascript/useInit/useInit.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-764d362e").then(next)
-    },
-  },
-  {
-    name: "v-4f25769c",
-    path: "/javascript/pubsub.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-4f25769c").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-21356b48").then(next)
     },
   },
   {
@@ -45,11 +25,19 @@ export const routes = [
     },
   },
   {
-    name: "v-21356b48",
-    path: "/plugins/plugins.html",
+    name: "v-4f25769c",
+    path: "/javascript/pubsub.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-21356b48").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-4f25769c").then(next)
+    },
+  },
+  {
+    name: "v-764d362e",
+    path: "/javascript/useInit/useInit.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-764d362e").then(next)
     },
   },
   {
@@ -59,6 +47,18 @@ export const routes = [
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-2d656c48").then(next)
     },
+  },
+  {
+    name: "v-1c7f9382",
+    path: "/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1c7f9382").then(next)
+    },
+  },
+  {
+    path: "/index.html",
+    redirect: "/"
   },
   {
     name: "v-1ac4b948",

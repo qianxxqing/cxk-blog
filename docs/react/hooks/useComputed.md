@@ -2,13 +2,13 @@
 #### 在react函数式组件模拟vue computed的set功能 ####
 ******
 
-react中函数式组件 可以用useMemo模拟vue的computed的get属性 当需要用到set属性的时候 需要对该hooks进行扩展
+`react`中函数式组件 可以用`useMemo`模拟vue的`computed`的`get`属性 当需要用到`set`属性的时候 需要对该hooks进行扩展
 
-下面自定义hooks useComputed
+下面自定义`hooks useComputed`
 
-首先说明vue和react的状态区别在于 vue用了proxy劫持数据 我们可以直接修改状态 但是react里面state的修改必须试用setState函数 
+首先说明vue和react的状态区别在于 `vue`用了`proxy`劫持数据 我们可以直接修改状态 但是`react`里面`state`的修改必须试用`setState`函数 
 
-也就是说我们vue的computed里面可以 直接对data数据操作即可完成set数据
+也就是说我们`vue`的`computed`里面可以 直接对`data`数据操作即可完成`set`数据
 
 ```javascript
 //vue.js
