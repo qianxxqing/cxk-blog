@@ -9,14 +9,6 @@ import GlobalLayout from "/Users/x/cxk/vue-press/vuepress-starter/node_modules/@
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-3643048e",
-    path: "/javascript/ArraySet/ArraySet.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-3643048e").then(next)
-    },
-  },
-  {
     name: "v-1c7f9382",
     path: "/",
     component: GlobalLayout,
@@ -29,14 +21,6 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-4f25769c",
-    path: "/javascript/pubsub.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-4f25769c").then(next)
-    },
-  },
-  {
     name: "v-764d362e",
     path: "/javascript/useInit/useInit.html",
     component: GlobalLayout,
@@ -45,11 +29,27 @@ export const routes = [
     },
   },
   {
-    name: "v-1ac4b948",
-    path: "/test/test.html",
+    name: "v-4f25769c",
+    path: "/javascript/pubsub.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1ac4b948").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-4f25769c").then(next)
+    },
+  },
+  {
+    name: "v-292f79dc",
+    path: "/javascript/extendClass/extendClass.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-292f79dc").then(next)
+    },
+  },
+  {
+    name: "v-21356b48",
+    path: "/plugins/plugins.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-21356b48").then(next)
     },
   },
   {
@@ -58,6 +58,14 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-2d656c48").then(next)
+    },
+  },
+  {
+    name: "v-1ac4b948",
+    path: "/test/test.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1ac4b948").then(next)
     },
   },
   {

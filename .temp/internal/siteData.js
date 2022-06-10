@@ -8,21 +8,6 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "class SuperArray ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/ArraySet/ArraySet.html",
-      "relativePath": "javascript/ArraySet/ArraySet.md",
-      "key": "v-3643048e",
-      "path": "/javascript/ArraySet/ArraySet.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "class SuperArray",
-          "slug": "class-superarray"
-        }
-      ]
-    },
-    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -53,21 +38,6 @@ export const siteData = {
       "path": "/"
     },
     {
-      "title": "PubSub的实现 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/pubsub.html",
-      "relativePath": "javascript/pubsub.md",
-      "key": "v-4f25769c",
-      "path": "/javascript/pubsub.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "PubSub的实现",
-          "slug": "pubsub的实现"
-        }
-      ]
-    },
-    {
       "title": "useInit缓存函数 ###",
       "frontmatter": {},
       "regularPath": "/javascript/useInit/useInit.html",
@@ -83,11 +53,54 @@ export const siteData = {
       ]
     },
     {
+      "title": "PubSub的实现 ###",
       "frontmatter": {},
-      "regularPath": "/test/test.html",
-      "relativePath": "test/test.md",
-      "key": "v-1ac4b948",
-      "path": "/test/test.html"
+      "regularPath": "/javascript/pubsub.html",
+      "relativePath": "javascript/pubsub.md",
+      "key": "v-4f25769c",
+      "path": "/javascript/pubsub.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "PubSub的实现",
+          "slug": "pubsub的实现"
+        }
+      ]
+    },
+    {
+      "title": "JavaScript类的扩展 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/extendClass/extendClass.html",
+      "relativePath": "javascript/extendClass/extendClass.md",
+      "key": "v-292f79dc",
+      "path": "/javascript/extendClass/extendClass.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "JavaScript类的扩展",
+          "slug": "javascript类的扩展"
+        }
+      ]
+    },
+    {
+      "title": "devConst ##",
+      "frontmatter": {},
+      "regularPath": "/plugins/plugins.html",
+      "relativePath": "plugins/plugins.md",
+      "key": "v-21356b48",
+      "path": "/plugins/plugins.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "devConst",
+          "slug": "devconst"
+        },
+        {
+          "level": 2,
+          "title": "代理console",
+          "slug": "代理console"
+        }
+      ]
     },
     {
       "title": "useComputed ###",
@@ -103,6 +116,13 @@ export const siteData = {
           "slug": "usecomputed"
         }
       ]
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/test/test.html",
+      "relativePath": "test/test.md",
+      "key": "v-1ac4b948",
+      "path": "/test/test.html"
     }
   ],
   "themeConfig": {
@@ -129,8 +149,8 @@ export const siteData = {
         "title": "JavaScript",
         "children": [
           [
-            "/javascript/ArraySet/ArraySet.md",
-            "ArraySet"
+            "/javascript/extendClass/extendClass.md",
+            "类的扩展"
           ],
           [
             "/javascript/pubsub.md",
@@ -155,7 +175,11 @@ export const siteData = {
             ]
           }
         ]
-      }
+      },
+      [
+        "/plugins/plugins.md",
+        "用于开发的小技巧"
+      ]
     ]
   }
 }

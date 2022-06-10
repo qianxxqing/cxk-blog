@@ -12,7 +12,7 @@ module.exports = {
       {
         title: 'JavaScript',
         children: [
-          ['/javascript/ArraySet/ArraySet.md', 'ArraySet'],
+          ['/javascript/extendClass/extendClass.md', '类的扩展'],
           ['/javascript/pubsub.md', '发布订阅(PubSub)'],
           ['/javascript/useInit/useInit.md', 'useInit函数'],
         ]
@@ -27,8 +27,9 @@ module.exports = {
             ]
           }
         ]
-      }
-    ]
+      },
+      ['/plugins/plugins.md', '用于开发的小技巧']
+    ],
   },
   configureWebpack: {
     resolve: {
