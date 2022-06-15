@@ -17,6 +17,7 @@ const createInitState = () => ({
   userInfo: {},
   count: 0,
   list: () => new Array(114514).fill().map((_, i) => i) //大型数据应该用函数暴露 后续修改直接替换整个函数
+  get list2: () => new Array(114514).fill().map((_, i) => i) //当然 你也可以使用object的计算属性get来缓存
 })
 
 //computed
