@@ -21,9 +21,20 @@ module.exports = {
         title: 'React',
         children: [
           {
-            title: 'hooks',
+            title: 'Hooks',
             children: [
               ['/react/hooks/useComputed.md', 'useComputed']
+            ]
+          },
+          {
+            title: 'React源码部分',
+            children: [
+              {
+                title: 'Hooks',
+                children: [
+                  ['/react/sourceCode/hooks/useEffect.md', 'useEffect']
+                ]
+              }
             ]
           }
         ]
