@@ -2,11 +2,10 @@
 #### 使用class组件实现 ####
 
 ```javascript
-//ProTable.js
 import React from 'react'
 import { Table } from 'antd'
+import SearchForm from './SearchForm'
 import defaultConfig from './defaultConfig'
-
 class TableContext extends Table {
   constructor(props) {
     super(props)
@@ -32,6 +31,7 @@ export default class CxkTable extends React.Component {
         }
       }
     }
+    this.searchFormRef = null
   }
 
   get pagination() {
@@ -41,8 +41,8 @@ export default class CxkTable extends React.Component {
     }
   }
 
-  //request hooks
-  get requestArguments() {
+
+  getRequestArguments = () => {
     const { pagination } = this
     const { current, pageSize } = pagination
     return [
@@ -50,21 +50,25 @@ export default class CxkTable extends React.Component {
       {
         current,
         pageSize
-      }
+      },
+      //sotter
+      undefined,
+      //filter
+      (this.searchFormRef.getFieldsValue() || {})
     ]
   }
 
   componentDidMount() {
-    console.log(this, 'this')
+    console.log(this.context, 'this')
     this.reload()
   }
 
   reload = () => {
     const { request } = this.props
-    const { requestArguments } = this
+    const { getRequestArguments } = this
     request && (async () => {
       this.setState({ loading: true })
-      const res = await request(...requestArguments)
+      const res = await request(...getRequestArguments())
       this.setState(state => ({
         dataSource: res.data,
         loading: false,
@@ -81,15 +85,67 @@ export default class CxkTable extends React.Component {
     const { dataSource, loading } = this.state
     const { pagination } = this
     return (
-      <TableContext 
-        columns={columns}
-        loading={loading}
-        pagination={pagination}
-        dataSource={dataSource}
-      />
+      <div>
+        <SearchForm columns={columns} ref={ref => this.searchFormRef = ref}/>
+        <TableContext 
+          columns={columns}
+          loading={loading}
+          pagination={pagination}
+          dataSource={dataSource}
+        />
+      </div>
     )
   }
 }
+
+```
+
+```javascript
+import React, { Component } from 'react'
+import { Form, Input, Button } from 'antd'
+const { Item } = Form
+
+export default Form.create({
+  mapPropsToFields: props => Form.createFormField({
+    columns: props.columns
+  })
+})(class SearchFormContext extends Component {
+  renderSearchFormItems = () => {
+    const { columns, form } = this.props
+    const { getFieldDecorator } = form
+    return columns.filter(item => !item.hideInSearch).map((item, i) => (
+      <Item label={item.title} key={i}>
+        {getFieldDecorator(item.dataIndex)(<Input/>)}
+      </Item>
+    ))
+  }
+  
+  shouldComponentUpdate() {
+    return false
+  }
+
+  handleReset = () => {
+    this.props.form.resetFields()
+  }
+
+  handleSearch = () => {
+    const vals = this.props.form.getFieldsValue()
+    console.log(vals)
+  }
+
+  render() {
+    const { renderSearchFormItems, handleReset, handleSearch } = this
+    return (
+      <Form>
+        {renderSearchFormItems()}
+        <Item>
+          <Button onClick={handleReset}>重置</Button>
+          <Button type="primary" onClick={handleSearch}>搜索</Button>
+        </Item>
+      </Form>
+    )
+  }
+})
 
 ```
 
@@ -110,7 +166,7 @@ export default {
 ```javascript
 //Demo.jsx
 import React, { Component } from 'react'
-import ProTable from './ProTable'
+import CxkTable from './CxkTable'
 
 export default class Test extends Component {
   get columns() {
@@ -134,7 +190,7 @@ export default class Test extends Component {
     setTimeout(() => {
       const list = Array(10).fill().map((_, i) => ({
         id: Math.random(),
-        title: Date.now(),
+        name: Date.now(),
         age: Math.random() * 20
       }))
       resolve(list)
@@ -145,11 +201,11 @@ export default class Test extends Component {
     const { columns } = this
     return (
       <div>
-        <ProTable
+        <CxkTable
           columns={columns}
           dataSource={[{}, {}]}
-          request={async (parmas) => {
-            console.log(parmas, 'params')
+          request={async (parmas, sorter, filter) => {
+            console.log(parmas, filter, 'params, filter')
             const list = await this.fetchData()
             return {
               data: list,
@@ -161,4 +217,5 @@ export default class Test extends Component {
     )
   }
 }
+
 ```
