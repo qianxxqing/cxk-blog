@@ -36,6 +36,15 @@ module.exports = {
                 ]
               }
             ]
+          },
+          {
+            title: 'ant design',
+            children: [
+              {
+                title: 'ProComponent',
+                children: ['/react/antd/ProComponent/ProTable.md', 'ProTable']
+              }
+            ]
           }
         ]
       },
