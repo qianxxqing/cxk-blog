@@ -1,11 +1,23 @@
 ### ProTable ###
-#### 使用class组件实现 ####
+#### 这里使用class组件实现 CxkTable -- 简易的ProTable ####
 
-```javascript
+目录结构如下
+```
+|-- CxkTable
+  |-- SearchForm
+  |   |-- index.jsx
+  |   |-- config.js //searchForm的默认配置文件
+  |-- index.jsx
+  |-- config.js //CxkTable默认配置文件
+```
+##### @/CxkTable/index.jsx #####
+
+```jsx
+//@/CxkTable/index.jsx
 import React from 'react'
 import { Table } from 'antd'
 import SearchForm from './SearchForm'
-import defaultConfig from './defaultConfig'
+import config from './config'
 class TableContext extends Table {
   constructor(props) {
     super(props)
@@ -19,7 +31,7 @@ export default class CxkTable extends React.Component {
       loading: false,
       dataSource: this.props.dataSource || [],
       pagination: {
-        ...defaultConfig.pagination,
+        ...config.pagination,
         onChange: (current, pageSize) => {
           this.setState(({ pagination }) => ({
             pagination: {
@@ -29,9 +41,9 @@ export default class CxkTable extends React.Component {
             }
           }), () => this.reload())
         }
-      }
+      },
+      filter: {} //request arguments[2] 
     }
-    this.searchFormRef = null
   }
 
   get pagination() {
@@ -41,9 +53,11 @@ export default class CxkTable extends React.Component {
     }
   }
 
+  setFilter = (filter, cb) => void this.setState({ filter }, cb)
 
   getRequestArguments = () => {
     const { pagination } = this
+    const { filter } = this.state
     const { current, pageSize } = pagination
     return [
       //pamams
@@ -54,7 +68,7 @@ export default class CxkTable extends React.Component {
       //sotter
       undefined,
       //filter
-      (this.searchFormRef.getFieldsValue() || {})
+      filter
     ]
   }
 
@@ -81,12 +95,20 @@ export default class CxkTable extends React.Component {
   }
 
   render() {
-    const { columns } = this.props
+    const { columns, search } = this.props
     const { dataSource, loading } = this.state
-    const { pagination } = this
+    const { setFilter, reload, pagination } = this
     return (
       <div>
-        <SearchForm columns={columns} ref={ref => this.searchFormRef = ref}/>
+        {
+          search && (
+            <SearchForm 
+              columns={columns} 
+              setFilter={setFilter}
+              reload={reload}
+            />
+          ) 
+        }
         <TableContext 
           columns={columns}
           loading={loading}
@@ -100,57 +122,8 @@ export default class CxkTable extends React.Component {
 
 ```
 
-```javascript
-import React, { Component } from 'react'
-import { Form, Input, Button } from 'antd'
-const { Item } = Form
-
-export default Form.create({
-  mapPropsToFields: props => Form.createFormField({
-    columns: props.columns
-  })
-})(class SearchFormContext extends Component {
-  renderSearchFormItems = () => {
-    const { columns, form } = this.props
-    const { getFieldDecorator } = form
-    return columns.filter(item => !item.hideInSearch).map((item, i) => (
-      <Item label={item.title} key={i}>
-        {getFieldDecorator(item.dataIndex)(<Input/>)}
-      </Item>
-    ))
-  }
-  
-  shouldComponentUpdate() {
-    return false
-  }
-
-  handleReset = () => {
-    this.props.form.resetFields()
-  }
-
-  handleSearch = () => {
-    const vals = this.props.form.getFieldsValue()
-    console.log(vals)
-  }
-
-  render() {
-    const { renderSearchFormItems, handleReset, handleSearch } = this
-    return (
-      <Form>
-        {renderSearchFormItems()}
-        <Item>
-          <Button onClick={handleReset}>重置</Button>
-          <Button type="primary" onClick={handleSearch}>搜索</Button>
-        </Item>
-      </Form>
-    )
-  }
-})
-
-```
-
-```javascript
-//defaultConfig.js
+##### @/CxkTable/config.js #####
+```js
 export default {
   pagination: {
     pageSizeOptions: [5, 10, 20, 30, 40, 50],
@@ -163,17 +136,95 @@ export default {
 }
 ```
 
-```javascript
+##### @/CxkTable/searchForm/index.jsx #####
+
+```jsx
+import React, { Component } from 'react'
+import { Col, Row, Form, Input, Button } from 'antd'
+import config from './config'
+const { Item } = Form
+
+
+export default Form.create({
+  name: 'searchForm',
+})(class SearchFormContext extends Component {
+  renderSearchFormItem = (item, key) => {
+    const { getFieldDecorator } = this.props.form
+    return (
+      <Item label={item.title} key={key}>
+        {
+          item.dataIndex ? getFieldDecorator(item.dataIndex)(
+            item.renderFormItem ? item.renderFormItem() : <Input/>
+          ) : (item.renderFormItem ? item.renderFormItem() : <Input/>)
+        }
+      </Item>
+    )
+  }
+  renderSearchFormItems = () => {
+    const { columns=[], form } = this.props
+    return columns.filter(item => !item.hideInSearch).map(this.renderSearchFormItem)
+  }
+
+  handleReset = () => {
+    this.props.form.resetFields()
+    this.props.setFilter({})
+  }
+
+  handleSearch = () => {
+    const vals = this.props.form.getFieldsValue()
+    this.props.setFilter(vals, () => {
+      this.props.reload()
+    })
+    
+  }
+
+  componentDidMount() {
+    console.log('searchFormDidMount()')
+  }
+
+  render() {
+    const { props, renderSearchFormItems, handleReset, handleSearch } = this
+    return (
+      <Form 
+        {...config.form}
+      >
+        {renderSearchFormItems()}
+        <Item>
+          <Button onClick={handleReset}>重置</Button>
+          <Button type="primary" onClick={handleSearch}>搜索</Button>
+        </Item>
+      </Form>
+    )
+  }
+})
+```
+
+##### @/CxkTable/searchForm/config.js #####
+
+```js
+export default {
+  form: {
+    layout: 'inline' 
+  }
+}
+```
+*****
+#### demo文件 ####
+
+
+```jsx
 //Demo.jsx
 import React, { Component } from 'react'
-import CxkTable from './CxkTable'
+import { Button, DatePicker } from 'antd'
+import CxkTable from './comonents/CxkTable'
 
 export default class Test extends Component {
   get columns() {
     return [
       {
         title: 'id',
-        dataIndex: 'id'
+        dataIndex: 'id',
+        hideInSearch: true
       },
       {
         title: '姓名',
@@ -182,16 +233,33 @@ export default class Test extends Component {
       {
         title: '年龄',
         dataIndex: 'age'
+      },
+      {
+        title: '注册时间',
+        dataIndex: 'time',
+        renderFormItem: () => <DatePicker/>
+      },
+      {
+        title: '操作',
+        render: (_, record) => (
+          <Button type="primary" onClick={() => this.addUpdateRecord(record.id)}>编辑</Button>
+        ),
+        hideInSearch: true
       }
     ]
+  }
+
+  addUpdateRecord = id => {
+    console.log('编辑' + id)
   }
 
   fetchData = async () => new Promise((resolve) => {
     setTimeout(() => {
       const list = Array(10).fill().map((_, i) => ({
         id: Math.random(),
-        name: Date.now(),
-        age: Math.random() * 20
+        name: Math.random() > 0.4 ? '马保国' : '蔡徐坤',
+        age: parseInt(Math.random() * 30),
+        time: Date.now()
       }))
       resolve(list)
     }, 2000)
@@ -203,6 +271,7 @@ export default class Test extends Component {
       <div>
         <CxkTable
           columns={columns}
+          search={false} //这里只支持false不支持searchConfig
           dataSource={[{}, {}]}
           request={async (parmas, sorter, filter) => {
             console.log(parmas, filter, 'params, filter')

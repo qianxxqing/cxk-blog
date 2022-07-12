@@ -37,11 +37,27 @@ export const routes = [
     },
   },
   {
+    name: "v-764d362e",
+    path: "/javascript/useInit/useInit.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-764d362e").then(next)
+    },
+  },
+  {
     name: "v-21356b48",
     path: "/plugins/plugins.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-21356b48").then(next)
+    },
+  },
+  {
+    name: "v-91550528",
+    path: "/react/antd/ProComponent/ProTable.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-91550528").then(next)
     },
   },
   {
@@ -58,14 +74,6 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-c69369b8").then(next)
-    },
-  },
-  {
-    name: "v-764d362e",
-    path: "/javascript/useInit/useInit.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-764d362e").then(next)
     },
   },
   {

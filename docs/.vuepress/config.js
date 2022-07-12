@@ -42,7 +42,9 @@ module.exports = {
             children: [
               {
                 title: 'ProComponent',
-                children: ['/react/antd/ProComponent/ProTable.md', 'ProTable']
+                children: [
+                  ['/react/antd/ProComponent/ProTable.md', 'ProTable']
+                ]
               }
             ]
           }
