@@ -133,6 +133,21 @@ export const siteData = {
       ]
     },
     {
+      "title": "useLockFn函数(竞态锁) ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useLockFn/useLockFn.html",
+      "relativePath": "javascript/useLockFn/useLockFn.md",
+      "key": "v-6c09fdbc",
+      "path": "/javascript/useLockFn/useLockFn.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useLockFn函数(竞态锁)",
+          "slug": "uselockfn函数-竞态锁"
+        }
+      ]
+    },
+    {
       "title": "useEffect ###",
       "frontmatter": {},
       "regularPath": "/react/sourceCode/hooks/useEffect.html",
@@ -189,6 +204,10 @@ export const siteData = {
           [
             "/javascript/useInit/useInit.md",
             "useInit函数"
+          ],
+          [
+            "/javascript/useLockFn/useLockFn.md",
+            "useLockFn函数(竞态锁)"
           ]
         ]
       },

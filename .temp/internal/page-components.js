@@ -9,6 +9,7 @@ export default {
   "v-21356b48": () => import("/Users/x/cxk/vue-press/vuepress-starter/docs/plugins/plugins.md"),
   "v-91550528": () => import("/Users/x/cxk/vue-press/vuepress-starter/docs/react/antd/ProComponent/ProTable.md"),
   "v-2d656c48": () => import("/Users/x/cxk/vue-press/vuepress-starter/docs/react/hooks/useComputed.md"),
+  "v-6c09fdbc": () => import("/Users/x/cxk/vue-press/vuepress-starter/docs/javascript/useLockFn/useLockFn.md"),
   "v-c69369b8": () => import("/Users/x/cxk/vue-press/vuepress-starter/docs/react/sourceCode/hooks/useEffect.md"),
   "v-1ac4b948": () => import("/Users/x/cxk/vue-press/vuepress-starter/docs/test/test.md") 
 }

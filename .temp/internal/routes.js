@@ -69,6 +69,14 @@ export const routes = [
     },
   },
   {
+    name: "v-6c09fdbc",
+    path: "/javascript/useLockFn/useLockFn.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6c09fdbc").then(next)
+    },
+  },
+  {
     name: "v-c69369b8",
     path: "/react/sourceCode/hooks/useEffect.html",
     component: GlobalLayout,

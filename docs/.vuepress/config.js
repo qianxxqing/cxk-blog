@@ -15,6 +15,7 @@ module.exports = {
           ['/javascript/extendClass/extendClass.md', '类的扩展'],
           ['/javascript/pubsub.md', '发布订阅(PubSub)'],
           ['/javascript/useInit/useInit.md', 'useInit函数'],
+          ['/javascript/useLockFn/useLockFn.md', 'useLockFn函数(竞态锁)'],
         ]
       },
       {
