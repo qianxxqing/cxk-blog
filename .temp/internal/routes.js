@@ -21,6 +21,14 @@ export const routes = [
     redirect: "/"
   },
   {
+    name: "v-7c78ee54",
+    path: "/javascript/AbortController.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-7c78ee54").then(next)
+    },
+  },
+  {
     name: "v-292f79dc",
     path: "/javascript/extendClass/extendClass.html",
     component: GlobalLayout,
@@ -45,6 +53,14 @@ export const routes = [
     },
   },
   {
+    name: "v-6c09fdbc",
+    path: "/javascript/useLockFn/useLockFn.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6c09fdbc").then(next)
+    },
+  },
+  {
     name: "v-21356b48",
     path: "/plugins/plugins.html",
     component: GlobalLayout,
@@ -66,14 +82,6 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-2d656c48").then(next)
-    },
-  },
-  {
-    name: "v-6c09fdbc",
-    path: "/javascript/useLockFn/useLockFn.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6c09fdbc").then(next)
     },
   },
   {

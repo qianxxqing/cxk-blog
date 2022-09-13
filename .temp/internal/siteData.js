@@ -38,6 +38,21 @@ export const siteData = {
       "path": "/"
     },
     {
+      "title": "AbortController优雅实现取消监听(取代removeEventListener) ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/AbortController.html",
+      "relativePath": "javascript/AbortController.md",
+      "key": "v-7c78ee54",
+      "path": "/javascript/AbortController.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "AbortController优雅实现取消监听(取代removeEventListener)",
+          "slug": "abortcontroller优雅实现取消监听-取代removeeventlistener"
+        }
+      ]
+    },
+    {
       "title": "JavaScript类的扩展 ###",
       "frontmatter": {},
       "regularPath": "/javascript/extendClass/extendClass.html",
@@ -79,6 +94,21 @@ export const siteData = {
           "level": 3,
           "title": "useInit缓存函数",
           "slug": "useinit缓存函数"
+        }
+      ]
+    },
+    {
+      "title": "useLockFn函数(竞态锁) ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useLockFn/useLockFn.html",
+      "relativePath": "javascript/useLockFn/useLockFn.md",
+      "key": "v-6c09fdbc",
+      "path": "/javascript/useLockFn/useLockFn.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useLockFn函数(竞态锁)",
+          "slug": "uselockfn函数-竞态锁"
         }
       ]
     },
@@ -129,21 +159,6 @@ export const siteData = {
           "level": 3,
           "title": "useComputed",
           "slug": "usecomputed"
-        }
-      ]
-    },
-    {
-      "title": "useLockFn函数(竞态锁) ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/useLockFn/useLockFn.html",
-      "relativePath": "javascript/useLockFn/useLockFn.md",
-      "key": "v-6c09fdbc",
-      "path": "/javascript/useLockFn/useLockFn.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useLockFn函数(竞态锁)",
-          "slug": "uselockfn函数-竞态锁"
         }
       ]
     },
@@ -208,6 +223,10 @@ export const siteData = {
           [
             "/javascript/useLockFn/useLockFn.md",
             "useLockFn函数(竞态锁)"
+          ],
+          [
+            "/javascript/AbortController.md",
+            "使用AbortController优雅销毁监听"
           ]
         ]
       },
