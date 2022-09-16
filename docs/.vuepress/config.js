@@ -49,6 +49,12 @@ module.exports = {
                 ]
               }
             ]
+          },
+          {
+            title: 'Hooks闭包陷阱',
+            children: [
+              ['/react/HooksClosureProblem/demo1.md', 'useMemo控制ui导致的闭包陷阱']
+            ]
           }
         ]
       },

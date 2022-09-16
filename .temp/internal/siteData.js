@@ -8,6 +8,21 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "useInit缓存函数 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useInit/useInit.html",
+      "relativePath": "javascript/useInit/useInit.md",
+      "key": "v-764d362e",
+      "path": "/javascript/useInit/useInit.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useInit缓存函数",
+          "slug": "useinit缓存函数"
+        }
+      ]
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -38,6 +53,123 @@ export const siteData = {
       "path": "/"
     },
     {
+      "title": "ProTable ###",
+      "frontmatter": {},
+      "regularPath": "/react/antd/ProComponent/ProTable.html",
+      "relativePath": "react/antd/ProComponent/ProTable.md",
+      "key": "v-91550528",
+      "path": "/react/antd/ProComponent/ProTable.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "ProTable",
+          "slug": "protable"
+        }
+      ]
+    },
+    {
+      "title": "useLockFn函数(竞态锁) ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useLockFn/useLockFn.html",
+      "relativePath": "javascript/useLockFn/useLockFn.md",
+      "key": "v-6c09fdbc",
+      "path": "/javascript/useLockFn/useLockFn.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useLockFn函数(竞态锁)",
+          "slug": "uselockfn函数-竞态锁"
+        }
+      ]
+    },
+    {
+      "title": "PubSub的实现 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/pubsub.html",
+      "relativePath": "javascript/pubsub.md",
+      "key": "v-4f25769c",
+      "path": "/javascript/pubsub.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "PubSub的实现",
+          "slug": "pubsub的实现"
+        }
+      ]
+    },
+    {
+      "title": "devConst ##",
+      "frontmatter": {},
+      "regularPath": "/plugins/plugins.html",
+      "relativePath": "plugins/plugins.md",
+      "key": "v-21356b48",
+      "path": "/plugins/plugins.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "devConst",
+          "slug": "devconst"
+        },
+        {
+          "level": 2,
+          "title": "代理console",
+          "slug": "代理console"
+        }
+      ]
+    },
+    {
+      "title": "我遇到的React Hooks中的闭包问题 (关键词: 函数词法作用域)",
+      "frontmatter": {},
+      "regularPath": "/react/HooksClosureProblem/demo1.html",
+      "relativePath": "react/HooksClosureProblem/demo1.md",
+      "key": "v-3a3d359c",
+      "path": "/react/HooksClosureProblem/demo1.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "我遇到的React Hooks中的闭包问题 (关键词: 函数词法作用域)",
+          "slug": "我遇到的react-hooks中的闭包问题-关键词-函数词法作用域"
+        }
+      ]
+    },
+    {
+      "title": "useEffect ###",
+      "frontmatter": {},
+      "regularPath": "/react/sourceCode/hooks/useEffect.html",
+      "relativePath": "react/sourceCode/hooks/useEffect.md",
+      "key": "v-c69369b8",
+      "path": "/react/sourceCode/hooks/useEffect.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useEffect",
+          "slug": "useeffect"
+        }
+      ]
+    },
+    {
+      "title": "useComputed ###",
+      "frontmatter": {},
+      "regularPath": "/react/hooks/useComputed.html",
+      "relativePath": "react/hooks/useComputed.md",
+      "key": "v-2d656c48",
+      "path": "/react/hooks/useComputed.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useComputed",
+          "slug": "usecomputed"
+        }
+      ]
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/test/test.html",
+      "relativePath": "test/test.md",
+      "key": "v-1ac4b948",
+      "path": "/test/test.html"
+    },
+    {
       "title": "AbortController优雅实现取消监听(取代removeEventListener) ###",
       "frontmatter": {},
       "regularPath": "/javascript/AbortController.html",
@@ -66,123 +198,6 @@ export const siteData = {
           "slug": "javascript类的扩展"
         }
       ]
-    },
-    {
-      "title": "PubSub的实现 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/pubsub.html",
-      "relativePath": "javascript/pubsub.md",
-      "key": "v-4f25769c",
-      "path": "/javascript/pubsub.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "PubSub的实现",
-          "slug": "pubsub的实现"
-        }
-      ]
-    },
-    {
-      "title": "useInit缓存函数 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/useInit/useInit.html",
-      "relativePath": "javascript/useInit/useInit.md",
-      "key": "v-764d362e",
-      "path": "/javascript/useInit/useInit.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useInit缓存函数",
-          "slug": "useinit缓存函数"
-        }
-      ]
-    },
-    {
-      "title": "useLockFn函数(竞态锁) ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/useLockFn/useLockFn.html",
-      "relativePath": "javascript/useLockFn/useLockFn.md",
-      "key": "v-6c09fdbc",
-      "path": "/javascript/useLockFn/useLockFn.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useLockFn函数(竞态锁)",
-          "slug": "uselockfn函数-竞态锁"
-        }
-      ]
-    },
-    {
-      "title": "devConst ##",
-      "frontmatter": {},
-      "regularPath": "/plugins/plugins.html",
-      "relativePath": "plugins/plugins.md",
-      "key": "v-21356b48",
-      "path": "/plugins/plugins.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "devConst",
-          "slug": "devconst"
-        },
-        {
-          "level": 2,
-          "title": "代理console",
-          "slug": "代理console"
-        }
-      ]
-    },
-    {
-      "title": "ProTable ###",
-      "frontmatter": {},
-      "regularPath": "/react/antd/ProComponent/ProTable.html",
-      "relativePath": "react/antd/ProComponent/ProTable.md",
-      "key": "v-91550528",
-      "path": "/react/antd/ProComponent/ProTable.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "ProTable",
-          "slug": "protable"
-        }
-      ]
-    },
-    {
-      "title": "useComputed ###",
-      "frontmatter": {},
-      "regularPath": "/react/hooks/useComputed.html",
-      "relativePath": "react/hooks/useComputed.md",
-      "key": "v-2d656c48",
-      "path": "/react/hooks/useComputed.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useComputed",
-          "slug": "usecomputed"
-        }
-      ]
-    },
-    {
-      "title": "useEffect ###",
-      "frontmatter": {},
-      "regularPath": "/react/sourceCode/hooks/useEffect.html",
-      "relativePath": "react/sourceCode/hooks/useEffect.md",
-      "key": "v-c69369b8",
-      "path": "/react/sourceCode/hooks/useEffect.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useEffect",
-          "slug": "useeffect"
-        }
-      ]
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/test/test.html",
-      "relativePath": "test/test.md",
-      "key": "v-1ac4b948",
-      "path": "/test/test.html"
     }
   ],
   "themeConfig": {
@@ -268,6 +283,15 @@ export const siteData = {
                   ]
                 ]
               }
+            ]
+          },
+          {
+            "title": "Hooks闭包陷阱",
+            "children": [
+              [
+                "/react/HooksClosureProblem/demo1.md",
+                "useMemo控制ui导致的闭包陷阱"
+              ]
             ]
           }
         ]
