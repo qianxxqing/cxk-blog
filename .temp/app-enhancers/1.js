@@ -1,2 +1,2 @@
-import "/Users/x/cxk/vue-press/vuepress-starter/node_modules/@vuepress/plugin-nprogress/enhanceAppFile.js"
+import "/Users/x/cxk/cxk-blog/node_modules/@vuepress/plugin-nprogress/enhanceAppFile.js"
 export default {}

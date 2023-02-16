@@ -16,6 +16,7 @@ module.exports = {
           ['/javascript/pubsub.md', '发布订阅(PubSub)'],
           ['/javascript/useInit/useInit.md', 'useInit函数'],
           ['/javascript/useLockFn/useLockFn.md', 'useLockFn函数(竞态锁)'],
+          ['/javascript/useOnce/useOnce.md', 'useOnce函数'],
           ['/javascript/AbortController.md', '使用AbortController优雅销毁监听']
         ]
       },

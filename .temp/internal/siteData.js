@@ -8,21 +8,6 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "useInit缓存函数 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/useInit/useInit.html",
-      "relativePath": "javascript/useInit/useInit.md",
-      "key": "v-764d362e",
-      "path": "/javascript/useInit/useInit.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useInit缓存函数",
-          "slug": "useinit缓存函数"
-        }
-      ]
-    },
-    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -49,36 +34,21 @@ export const siteData = {
       },
       "regularPath": "/",
       "relativePath": "README.md",
-      "key": "v-1c7f9382",
+      "key": "v-099d9706",
       "path": "/"
     },
     {
-      "title": "ProTable ###",
+      "title": "JavaScript类的扩展 ###",
       "frontmatter": {},
-      "regularPath": "/react/antd/ProComponent/ProTable.html",
-      "relativePath": "react/antd/ProComponent/ProTable.md",
-      "key": "v-91550528",
-      "path": "/react/antd/ProComponent/ProTable.html",
+      "regularPath": "/javascript/extendClass/extendClass.html",
+      "relativePath": "javascript/extendClass/extendClass.md",
+      "key": "v-2a8e10eb",
+      "path": "/javascript/extendClass/extendClass.html",
       "headers": [
         {
           "level": 3,
-          "title": "ProTable",
-          "slug": "protable"
-        }
-      ]
-    },
-    {
-      "title": "useLockFn函数(竞态锁) ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/useLockFn/useLockFn.html",
-      "relativePath": "javascript/useLockFn/useLockFn.md",
-      "key": "v-6c09fdbc",
-      "path": "/javascript/useLockFn/useLockFn.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useLockFn函数(竞态锁)",
-          "slug": "uselockfn函数-竞态锁"
+          "title": "JavaScript类的扩展",
+          "slug": "javascript类的扩展"
         }
       ]
     },
@@ -87,7 +57,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/javascript/pubsub.html",
       "relativePath": "javascript/pubsub.md",
-      "key": "v-4f25769c",
+      "key": "v-57b4ea96",
       "path": "/javascript/pubsub.html",
       "headers": [
         {
@@ -98,11 +68,56 @@ export const siteData = {
       ]
     },
     {
+      "title": "AbortController优雅实现取消监听(取代removeEventListener) ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/AbortController.html",
+      "relativePath": "javascript/AbortController.md",
+      "key": "v-26bf8e2d",
+      "path": "/javascript/AbortController.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "AbortController优雅实现取消监听(取代removeEventListener)",
+          "slug": "abortcontroller优雅实现取消监听-取代removeeventlistener"
+        }
+      ]
+    },
+    {
+      "title": "useLockFn函数(竞态锁) ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useLockFn/useLockFn.html",
+      "relativePath": "javascript/useLockFn/useLockFn.md",
+      "key": "v-0596900a",
+      "path": "/javascript/useLockFn/useLockFn.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useLockFn函数(竞态锁)",
+          "slug": "uselockfn函数-竞态锁"
+        }
+      ]
+    },
+    {
+      "title": "useOnce函数 在生命周期内只会令其回调运行1次的hooks ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useOnce/useOnce.html",
+      "relativePath": "javascript/useOnce/useOnce.md",
+      "key": "v-14ae177a",
+      "path": "/javascript/useOnce/useOnce.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useOnce函数 在生命周期内只会令其回调运行1次的hooks",
+          "slug": "useonce函数-在生命周期内只会令其回调运行1次的hooks"
+        }
+      ]
+    },
+    {
       "title": "devConst ##",
       "frontmatter": {},
       "regularPath": "/plugins/plugins.html",
       "relativePath": "plugins/plugins.md",
-      "key": "v-21356b48",
+      "key": "v-b1855a16",
       "path": "/plugins/plugins.html",
       "headers": [
         {
@@ -118,11 +133,26 @@ export const siteData = {
       ]
     },
     {
+      "title": "useInit缓存函数 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useInit/useInit.html",
+      "relativePath": "javascript/useInit/useInit.md",
+      "key": "v-2093d607",
+      "path": "/javascript/useInit/useInit.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useInit缓存函数",
+          "slug": "useinit缓存函数"
+        }
+      ]
+    },
+    {
       "title": "我遇到的React Hooks中的闭包问题 (关键词: 函数词法作用域)",
       "frontmatter": {},
       "regularPath": "/react/HooksClosureProblem/demo1.html",
       "relativePath": "react/HooksClosureProblem/demo1.md",
-      "key": "v-3a3d359c",
+      "key": "v-f436cb96",
       "path": "/react/HooksClosureProblem/demo1.html",
       "headers": [
         {
@@ -133,26 +163,11 @@ export const siteData = {
       ]
     },
     {
-      "title": "useEffect ###",
-      "frontmatter": {},
-      "regularPath": "/react/sourceCode/hooks/useEffect.html",
-      "relativePath": "react/sourceCode/hooks/useEffect.md",
-      "key": "v-c69369b8",
-      "path": "/react/sourceCode/hooks/useEffect.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useEffect",
-          "slug": "useeffect"
-        }
-      ]
-    },
-    {
       "title": "useComputed ###",
       "frontmatter": {},
       "regularPath": "/react/hooks/useComputed.html",
       "relativePath": "react/hooks/useComputed.md",
-      "key": "v-2d656c48",
+      "key": "v-759b0075",
       "path": "/react/hooks/useComputed.html",
       "headers": [
         {
@@ -163,41 +178,41 @@ export const siteData = {
       ]
     },
     {
+      "title": "useEffect ###",
+      "frontmatter": {},
+      "regularPath": "/react/sourceCode/hooks/useEffect.html",
+      "relativePath": "react/sourceCode/hooks/useEffect.md",
+      "key": "v-c7d22506",
+      "path": "/react/sourceCode/hooks/useEffect.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useEffect",
+          "slug": "useeffect"
+        }
+      ]
+    },
+    {
+      "title": "ProTable ###",
+      "frontmatter": {},
+      "regularPath": "/react/antd/ProComponent/ProTable.html",
+      "relativePath": "react/antd/ProComponent/ProTable.md",
+      "key": "v-9293c076",
+      "path": "/react/antd/ProComponent/ProTable.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "ProTable",
+          "slug": "protable"
+        }
+      ]
+    },
+    {
       "frontmatter": {},
       "regularPath": "/test/test.html",
       "relativePath": "test/test.md",
-      "key": "v-1ac4b948",
+      "key": "v-72930975",
       "path": "/test/test.html"
-    },
-    {
-      "title": "AbortController优雅实现取消监听(取代removeEventListener) ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/AbortController.html",
-      "relativePath": "javascript/AbortController.md",
-      "key": "v-7c78ee54",
-      "path": "/javascript/AbortController.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "AbortController优雅实现取消监听(取代removeEventListener)",
-          "slug": "abortcontroller优雅实现取消监听-取代removeeventlistener"
-        }
-      ]
-    },
-    {
-      "title": "JavaScript类的扩展 ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/extendClass/extendClass.html",
-      "relativePath": "javascript/extendClass/extendClass.md",
-      "key": "v-292f79dc",
-      "path": "/javascript/extendClass/extendClass.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "JavaScript类的扩展",
-          "slug": "javascript类的扩展"
-        }
-      ]
     }
   ],
   "themeConfig": {
@@ -238,6 +253,10 @@ export const siteData = {
           [
             "/javascript/useLockFn/useLockFn.md",
             "useLockFn函数(竞态锁)"
+          ],
+          [
+            "/javascript/useOnce/useOnce.md",
+            "useOnce函数"
           ],
           [
             "/javascript/AbortController.md",
