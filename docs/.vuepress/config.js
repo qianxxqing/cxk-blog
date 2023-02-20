@@ -48,7 +48,8 @@ module.exports = {
                 children: [
                   ['/react/antd/ProComponent/ProTable.md', 'ProTable']
                 ]
-              }
+              },
+              ['/react/antd/RequestButton.md', 'RequestButton']
             ]
           },
           {
