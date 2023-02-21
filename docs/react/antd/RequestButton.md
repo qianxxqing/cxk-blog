@@ -34,7 +34,6 @@ import { RequestButton } from '@/components/myAntd'
 export default function Demo() {
   
   const handleOutputQuery = () => new Promise((resolve, reject) => {
-    const [params, sotter, filter] = tableRef.current.getRequestArguments()
     setTimeout(() => {
       console.log('output')
       resolve()
