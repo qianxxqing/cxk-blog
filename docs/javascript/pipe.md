@@ -77,7 +77,7 @@ const pipe = async (...args) => { //arg must use function
   try {
     const gen = generator(middlewares)
     for(const middleware of middlewares) {
-      const isCallbackExecuted = await new Promise((resolve, reject) => {
+      await new Promise((resolve, reject) => {
         try {
           middleware?.(() => {
             resolve()
