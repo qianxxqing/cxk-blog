@@ -17,7 +17,8 @@ module.exports = {
           ['/javascript/useInit/useInit.md', 'useInit函数'],
           ['/javascript/useLockFn/useLockFn.md', 'useLockFn函数(竞态锁)'],
           ['/javascript/useOnce/useOnce.md', 'useOnce函数'],
-          ['/javascript/AbortController.md', '使用AbortController优雅销毁监听']
+          ['/javascript/AbortController.md', '使用AbortController优雅销毁监听'],
+          ['/javascript/pipe.md', '使用pipe函数优雅的管理多个条件执行的回调']
         ]
       },
       {

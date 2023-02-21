@@ -8,17 +8,47 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "PubSub的实现 ###",
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "heroImage": "/img/akebi.jpg",
+        "heroText": "Hero 标题2",
+        "tagline": "Hero 副标题",
+        "actionText": "快速上手 →",
+        "actionLink": "/test/test/",
+        "features": [
+          {
+            "title": "简洁至上",
+            "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。"
+          },
+          {
+            "title": "Vue驱动",
+            "details": "享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。"
+          },
+          {
+            "title": "高性能",
+            "details": "VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。"
+          }
+        ],
+        "footer": "MIT Licensed | Copyright © 2018-present Evan You"
+      },
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-099d9706",
+      "path": "/"
+    },
+    {
+      "title": "AbortController优雅实现取消监听(取代removeEventListener) ###",
       "frontmatter": {},
-      "regularPath": "/javascript/pubsub.html",
-      "relativePath": "javascript/pubsub.md",
-      "key": "v-57b4ea96",
-      "path": "/javascript/pubsub.html",
+      "regularPath": "/javascript/AbortController.html",
+      "relativePath": "javascript/AbortController.md",
+      "key": "v-26bf8e2d",
+      "path": "/javascript/AbortController.html",
       "headers": [
         {
           "level": 3,
-          "title": "PubSub的实现",
-          "slug": "pubsub的实现"
+          "title": "AbortController优雅实现取消监听(取代removeEventListener)",
+          "slug": "abortcontroller优雅实现取消监听-取代removeeventlistener"
         }
       ]
     },
@@ -38,17 +68,32 @@ export const siteData = {
       ]
     },
     {
-      "title": "AbortController优雅实现取消监听(取代removeEventListener) ###",
+      "title": "pipe函数 ###",
       "frontmatter": {},
-      "regularPath": "/javascript/AbortController.html",
-      "relativePath": "javascript/AbortController.md",
-      "key": "v-26bf8e2d",
-      "path": "/javascript/AbortController.html",
+      "regularPath": "/javascript/pipe.html",
+      "relativePath": "javascript/pipe.md",
+      "key": "v-1a23cd56",
+      "path": "/javascript/pipe.html",
       "headers": [
         {
           "level": 3,
-          "title": "AbortController优雅实现取消监听(取代removeEventListener)",
-          "slug": "abortcontroller优雅实现取消监听-取代removeeventlistener"
+          "title": "pipe函数",
+          "slug": "pipe函数"
+        }
+      ]
+    },
+    {
+      "title": "PubSub的实现 ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/pubsub.html",
+      "relativePath": "javascript/pubsub.md",
+      "key": "v-57b4ea96",
+      "path": "/javascript/pubsub.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "PubSub的实现",
+          "slug": "pubsub的实现"
         }
       ]
     },
@@ -83,34 +128,19 @@ export const siteData = {
       ]
     },
     {
-      "title": "Home",
-      "frontmatter": {
-        "home": true,
-        "heroImage": "/img/akebi.jpg",
-        "heroText": "Hero 标题2",
-        "tagline": "Hero 副标题",
-        "actionText": "快速上手 →",
-        "actionLink": "/test/test/",
-        "features": [
-          {
-            "title": "简洁至上",
-            "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。"
-          },
-          {
-            "title": "Vue驱动",
-            "details": "享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。"
-          },
-          {
-            "title": "高性能",
-            "details": "VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。"
-          }
-        ],
-        "footer": "MIT Licensed | Copyright © 2018-present Evan You"
-      },
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-099d9706",
-      "path": "/"
+      "title": "useOnce函数 在生命周期内只会令其回调运行1次的hooks ###",
+      "frontmatter": {},
+      "regularPath": "/javascript/useOnce/useOnce.html",
+      "relativePath": "javascript/useOnce/useOnce.md",
+      "key": "v-14ae177a",
+      "path": "/javascript/useOnce/useOnce.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "useOnce函数 在生命周期内只会令其回调运行1次的hooks",
+          "slug": "useonce函数-在生命周期内只会令其回调运行1次的hooks"
+        }
+      ]
     },
     {
       "title": "devConst ##",
@@ -133,21 +163,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "useOnce函数 在生命周期内只会令其回调运行1次的hooks ###",
-      "frontmatter": {},
-      "regularPath": "/javascript/useOnce/useOnce.html",
-      "relativePath": "javascript/useOnce/useOnce.md",
-      "key": "v-14ae177a",
-      "path": "/javascript/useOnce/useOnce.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "useOnce函数 在生命周期内只会令其回调运行1次的hooks",
-          "slug": "useonce函数-在生命周期内只会令其回调运行1次的hooks"
-        }
-      ]
-    },
-    {
       "title": "我遇到的React Hooks中的闭包问题 (关键词: 函数词法作用域)",
       "frontmatter": {},
       "regularPath": "/react/HooksClosureProblem/demo1.html",
@@ -159,21 +174,6 @@ export const siteData = {
           "level": 3,
           "title": "我遇到的React Hooks中的闭包问题 (关键词: 函数词法作用域)",
           "slug": "我遇到的react-hooks中的闭包问题-关键词-函数词法作用域"
-        }
-      ]
-    },
-    {
-      "title": "RequestButton ###",
-      "frontmatter": {},
-      "regularPath": "/react/antd/RequestButton.html",
-      "relativePath": "react/antd/RequestButton.md",
-      "key": "v-11aa9e83",
-      "path": "/react/antd/RequestButton.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "RequestButton",
-          "slug": "requestbutton"
         }
       ]
     },
@@ -193,6 +193,21 @@ export const siteData = {
       ]
     },
     {
+      "title": "RequestButton ###",
+      "frontmatter": {},
+      "regularPath": "/react/antd/RequestButton.html",
+      "relativePath": "react/antd/RequestButton.md",
+      "key": "v-11aa9e83",
+      "path": "/react/antd/RequestButton.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "RequestButton",
+          "slug": "requestbutton"
+        }
+      ]
+    },
+    {
       "title": "useComputed ###",
       "frontmatter": {},
       "regularPath": "/react/hooks/useComputed.html",
@@ -208,13 +223,6 @@ export const siteData = {
       ]
     },
     {
-      "frontmatter": {},
-      "regularPath": "/test/test.html",
-      "relativePath": "test/test.md",
-      "key": "v-72930975",
-      "path": "/test/test.html"
-    },
-    {
       "title": "useEffect ###",
       "frontmatter": {},
       "regularPath": "/react/sourceCode/hooks/useEffect.html",
@@ -228,6 +236,13 @@ export const siteData = {
           "slug": "useeffect"
         }
       ]
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/test/test.html",
+      "relativePath": "test/test.md",
+      "key": "v-72930975",
+      "path": "/test/test.html"
     }
   ],
   "themeConfig": {
@@ -276,6 +291,10 @@ export const siteData = {
           [
             "/javascript/AbortController.md",
             "使用AbortController优雅销毁监听"
+          ],
+          [
+            "/javascript/pipe.md",
+            "使用pipe函数优雅的管理多个条件执行的回调"
           ]
         ]
       },
