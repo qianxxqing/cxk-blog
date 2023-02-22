@@ -1,7 +1,6 @@
 ## devConst ##
 
 在开发环境下使用的一些变量 比如说开发环境下的css容器添加border而发布生产后让border隐藏 可以通过`process.env`对象来区分环境
-
 ##### react项目中使用 #####
 
 ```jsx

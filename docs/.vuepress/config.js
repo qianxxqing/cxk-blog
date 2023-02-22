@@ -61,7 +61,13 @@ module.exports = {
           }
         ]
       },
-      ['/plugins/plugins.md', '用于开发的小技巧']
+      ['/plugins/plugins.md', '用于开发的小技巧'],
+      {
+        title: 'utils',
+        children: [
+          ['/utils/utils.md', '个人常用工具函数库'],
+        ]
+      }
     ],
   },
   configureWebpack: {

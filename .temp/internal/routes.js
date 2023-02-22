@@ -37,19 +37,19 @@ export const routes = [
     },
   },
   {
-    name: "v-1a23cd56",
-    path: "/javascript/pipe.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1a23cd56").then(next)
-    },
-  },
-  {
     name: "v-57b4ea96",
     path: "/javascript/pubsub.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-57b4ea96").then(next)
+    },
+  },
+  {
+    name: "v-1a23cd56",
+    path: "/javascript/pipe.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-1a23cd56").then(next)
     },
   },
   {
@@ -69,19 +69,19 @@ export const routes = [
     },
   },
   {
-    name: "v-14ae177a",
-    path: "/javascript/useOnce/useOnce.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-14ae177a").then(next)
-    },
-  },
-  {
     name: "v-b1855a16",
     path: "/plugins/plugins.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-b1855a16").then(next)
+    },
+  },
+  {
+    name: "v-14ae177a",
+    path: "/javascript/useOnce/useOnce.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-14ae177a").then(next)
     },
   },
   {
@@ -101,19 +101,19 @@ export const routes = [
     },
   },
   {
-    name: "v-11aa9e83",
-    path: "/react/antd/RequestButton.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-11aa9e83").then(next)
-    },
-  },
-  {
     name: "v-759b0075",
     path: "/react/hooks/useComputed.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-759b0075").then(next)
+    },
+  },
+  {
+    name: "v-61ad8ab5",
+    path: "/utils/utils.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-61ad8ab5").then(next)
     },
   },
   {
@@ -130,6 +130,14 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-72930975").then(next)
+    },
+  },
+  {
+    name: "v-11aa9e83",
+    path: "/react/antd/RequestButton.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-11aa9e83").then(next)
     },
   },
   {
