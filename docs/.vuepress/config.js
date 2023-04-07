@@ -1,14 +1,8 @@
 module.exports = {
-  title: 'cxk',
-  description: 'cxknmsl',
+  title: '只因你太美',
+  description: ' ',
   themeConfig: {
-    nav: [
-      { text: '首页', link: '/' },
-      { text: 'test页面', link: '/test/test' },
-    ],
     sidebar: [
-      ['/', '首页'],
-      ['/test/test', 'test页面'],
       {
         title: 'JavaScript',
         children: [
